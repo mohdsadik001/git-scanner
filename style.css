@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;    
+    font-size: 1.2rem;
+}
+
+
+body {
+    width: 100vw;
+    /* height: 100vh; */
+    background: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url('./eastman-childs-CEtIM994vaI-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+h1{
+    font-weight: 500;
+}
+
+p{
+    font-weight: 400;
+}
+
+
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('./eastman-childs-CEtIM994vaI-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    will-change: filter;
+}
+
+.blurred {
+  filter: blur(2px);
+  pointer-events: none; /* prevents interaction */
+  /* transition: filter 0.3s ease; */
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 80%;
+    height: 100%;
+
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+}
+
+
+
+.input-box {
+    width: 100%;
+    border: 1px solid gray;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+}
+
+.input-box i {
+    font-size: 1.5rem;
+}
+
+input {
+    width: 97%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 1rem .8rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: .6rem 2rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 1.5rem;
+    background-color: #fff;
+    color: black;
+}
+
+
+/* .result-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:  0vw;
+    height: 45rem;
+    border-radius: 2rem;
+    padding: 1rem 4rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1.2rem);
+    -webkit-backdrop-filter: blur(1.2rem);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 3.2rem rgba(0, 0, 0, 0.2);
+    color: #fff;
+    margin: 2rem auto;
+    display: non;
+} */
+
+/* Initially hide the popup */
+#result-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 80%;
+    max-width: 900px;
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1.2rem);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* Close button */
+#close-popup {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    /* background: #fff; */
+    color: #000;
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    position: center;
+}
+
+.header{
+    width: 100%;
+    border: .1rem solid gray;
+    border-radius: 2rem;
+    display: flex;
+    padding: 2rem 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
+.header h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    
+    background: rgba(255, 255, 255, 0.1);
+    /* Light translucent white */
+    backdrop-filter: blur(1.2rem);
+    /* Strong blur */
+    -webkit-backdrop-filter: blur(1.2rem);
+    /* Safari support */
+    border: .1rem solid rgba(255, 255, 255, 0.1);
+    /* Soft border */
+    box-shadow: 0 8px 3.2rem rgba(0, 0, 0, 0.2);
+    /* Smooth shadow */
+    color: #fff;
+    display: inline-block;
+    padding: .2rem .6rem;
+    text-align: left;
+    border-radius: .4rem;
+    margin: .5rem 0;
+
+}
+
+#bio{
+    font-size: .8rem;
+    color: #fff;
+}
+
+.user-info{
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    /* margin-top: 2rem; */
+    /* height: 60%; */
+    border: .1rem solid gray;
+    border-radius: 2rem;
+    margin: 2rem 0;
+
+}
+
+
+.user-info .left, .user-info .right{
+    width: 50%;
+    /* border: 1px solid lightgray; */
+    padding: 1rem 2rem;
+    /* background: red; */
+    /* height: 100%; */
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.user-info h1{
+    font-size: 1.6rem;
+}
+
+
+.total-repositories{
+    width: 100%;
+    border: .1rem solid gray;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+
+#thanks-msg-name{
+    color: rgb(236, 191, 87);
+}
+
+#git-look{
+    font-size: 5rem;
+    color: rgb(236, 157, 20);
+    
+}
+
+#git-look span{
+    font-weight: 800;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8rem;
+    
+}
+
+
+
+/* Add this at the bottom of your style.css file */
+
+@media (max-width: 1024px) {
+    .header, .user-info {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .user-info .left, .user-info .right {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    #git-look {
+        font-size: 3rem;
+    }
+
+    #git-look span {
+        font-size: 4.5rem;
+    }
+
+    .input-box input {
+        font-size: 1rem;
+    }
+
+    .input-box i {
+        font-size: 1.2rem;
+    }
+
+    .header h1,
+    .user-info h1 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        padding: .5rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .result-container {
+        width: 90%;
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 95%;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    #git-look {
+        font-size: 2.5rem;
+    }
+
+    #git-look span {
+        font-size: 3.5rem;
+    }
+
+    .input-box {
+        padding: 0 .6rem;
+    }
+
+    .input-box input {
+        font-size: 0.9rem;
+    }
+
+    .header,
+    .user-info,
+    .total-repositories {
+        padding: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header h1,
+    .user-info h1 {
+        font-size: 1.1rem;
+    }
+
+    .result-container {
+        padding: 1rem;
+    }
+}
+
+/* Smooth scrolling on mobile */
+html {
+    scroll-behavior: smooth;
+}

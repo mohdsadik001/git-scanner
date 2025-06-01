@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>GitScanner - Mohd Sadik</title>
+</head>
+
+<body>
+    <div class="hero-section" id="hero-section"> 
+        <form>
+            <h1 id="git-look"><span>G</span>it<span>S</span>canner</h1>
+            <h1>Find Github User Activity</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Enter github username" required>
+                <i class="ri-search-line"></i>
+            </div>
+            <button>Submit</button>
+        </form>
+
+
+    </div>
+
+    <div class="result-container" id="result-container">
+            <button id="close-popup">✖</button>
+
+        <div class="header">
+            <div class="left">
+                <div class="avatar-container" id="avatar-container">
+                    <img src="" alt="" id="avatar-img">
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="name-liveLink">
+                    <h1 id="name"></h1>
+                    <p id="userid"></p>
+
+                    <div class="user-bio">
+                        <p id="bio"></p>
+                    </div>
+                    <a id="github-link" href="" target="_blank">
+                        Github Live <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="user-info">
+            <div class="left">
+
+                <h1>Total Repositories<p id="total-repositories"></p></h1>
+                <h1>Followers<p id="followers-count"></p></h1>
+                <h1>Following<p id="following-count"></p></h1>
+            </div>
+            
+            <div class="right">
+                <h1>Location<p id="location"></p></h1>
+                <h1>Joined at<p id="created-at"></p></h1>
+                <h1>Hireable<p id="hireable"></p></h1>
+            </div>
+        </div>
+
+        <div class="total-repositories">
+            <h1>Thank You very much <span id="thanks-msg-name"></span> for using this platform 🙏</h1>
+        </div>
+
+        
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
