@@ -7,7 +7,7 @@ A sleek and responsive GitHub user activity scanner that fetches public profile 
 
 ## 🚀 Live Preview
 
-🌐 [Check it out now](#) *(Add your deployment link here)*
+🌐 [Check it out now](#) *(https://git-scanner.netlify.app/)*
 
 ---
 
